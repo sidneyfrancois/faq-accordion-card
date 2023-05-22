@@ -18,6 +18,7 @@ body {
   align-items: center;
   background-color: var(--gradient-soft-violet);
   font-family: var(--font-family-kumbh);
+  font-size: 12px;
 }
 
 .card {
