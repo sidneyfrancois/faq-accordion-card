@@ -1,19 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 :root {
   --gradient-soft-violet: hsl(273, 75%, 66%);
+
+  --text-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --text-soft-red: hsl(14, 88%, 65%);
+
+  --dividers-light-grayish-blue: hsl(240, 5%, 91%);
+  --font-family-kumbh: "Kumbh Sans";
+  --font-kumbh-regular: 400;
+  --font-kumbh-bold: 700;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 4rem; */
+
   background-color: var(--gradient-soft-violet);
+  font-size: 12px;
+  font-family: var(--font-family-kumbh);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 90%;
 
   background-color: white;
   border-radius: 25px;
@@ -40,4 +54,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.5rem;
+}
+
+.question-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.trigger-question-open:checked ~ .question-grid {
+  grid-template-rows: 1fr;
+}
+
+.question-container {
+  min-height: 0;
+}
+
+.question-transform {
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.4s ease, visibility 0s 0.4s ease;
+}
+
+.trigger-question-open:checked ~ .question-grid .question-transform {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.4s ease, visibility 0s linear;
 }
