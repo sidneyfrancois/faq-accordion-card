@@ -116,3 +116,52 @@ body {
 .arrow {
   float: right;
 }
+
+@media (min-width: 850px) {
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+
+    margin-top: initial;
+    width: 70%;
+    overflow: hidden;
+  }
+
+  .content {
+    align-items: initial;
+    padding: 4rem 4.5rem 4rem 0;
+    width: 100%;
+  }
+
+  .content h1 {
+    padding-left: 1rem;
+  }
+
+  .image-header {
+    position: static;
+    width: 100%;
+    min-width: 472px;
+
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-clip: content-box;
+    background-position-y: -18rem;
+    background-position-x: -37rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .image-header .woman {
+    position: static;
+    margin-top: initial;
+    margin-left: -15%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 850px) {
+  .card {
+    width: 90%;
+  }
+}
