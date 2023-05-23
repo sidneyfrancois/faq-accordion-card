@@ -40,6 +40,14 @@ body {
   position: relative;
 }
 
+.image-header .box {
+  display: none;
+}
+
+.image-header img[version="desktop"] {
+  display: none;
+}
+
 .image-header .woman {
   margin-top: -45%;
   padding-bottom: 2rem;
@@ -128,7 +136,6 @@ body {
 
     margin-top: initial;
     width: 70%;
-    overflow: hidden;
   }
 
   .content {
@@ -141,26 +148,41 @@ body {
     padding-left: 1rem;
   }
 
+  .image-header img[version="mobile"] {
+    display: none;
+  }
+
+  .image-header img[version="desktop"] {
+    display: block;
+  }
+
   .image-header {
-    position: static;
     width: 100%;
     min-width: 472px;
+    position: relative;
 
     background-image: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-attachment: local;
     background-clip: content-box;
-    background-position-y: -18rem;
-    background-position-x: -37rem;
+    background-position-y: -21rem;
+    background-position-x: -35.5rem;
 
     display: flex;
     align-items: center;
   }
 
   .image-header .woman {
-    position: static;
-    margin-top: initial;
+    all: initial;
     margin-left: -15%;
+    overflow: hidden;
+  }
+
+  .image-header .box {
+    display: block;
+    position: absolute;
+    margin-left: -15%;
+    margin-top: 5%;
   }
 }
 
